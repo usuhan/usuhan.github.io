@@ -1,0 +1,127 @@
+﻿@charset "utf-8";
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");
+@import url("./reset.css");
+
+/* 숨김 콘텐츠 */
+
+.hidden {
+  position: absolute;
+  left: -9999em;
+}
+
+
+/* 하이퍼링크 스타일 */
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover,
+a:focus {
+  color: #f00;
+}
+
+
+/* 본문 스타일 */
+
+body {
+  font-family: 'Spoqa Han Sans';
+  font-weight: 400;
+}
+
+
+/* 레이아웃 */
+
+.wrapper {
+  background: skyblue;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header,
+.navigation,
+.footer,
+.main-content,
+.slogan {
+  width: 100%;
+}
+
+.navigation {
+  background: plum;
+}
+
+.main-content {
+  background: #DDF184;
+}
+
+.slogan {
+  background: #F59F67;
+}
+
+.footer {
+  background: #83F1A8;
+}
+
+
+/* 모바일 */
+
+@media all and (max-width:999px) {
+  .header {
+    background: #38302e;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+  }
+  .member {
+    order: -1;
+    background: #988574;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .member a {
+    display: block;
+    padding: 0.5rem;
+    margin-left: 1rem;
+  }
+  .logo {
+    padding: 1rem;
+  }
+  .search {
+    padding: 0 1rem 1rem 1rem;
+  }
+  #search {
+    border: 1px solid #aaa;
+    width: calc(100% - 75px);
+    margin-right: 0.5rem;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 1.5rem;
+  }
+  .btn-search {
+    border: 0;
+    border-radius: 5px;
+    padding: 0.2rem 1rem;
+    background: #988574;
+    color: #fff;
+  }
+}
+
+
+/* 데스크탑 */
+
+@media all and (min-width:1000px) {
+  .wrapper {
+    align-items: center;
+  }
+  .header,
+  .navigation,
+  .footer,
+  .main-content,
+  .slogan {
+    width: 80%;
+  }
+}
