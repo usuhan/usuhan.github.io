@@ -24,13 +24,57 @@
       <form action="javascript:alert('검색이 완료되었습니다.');" class="search">
         <fieldset>
           <legend class="hidden">검색 폼</legend>
-          <label class="hidden" for="">검색어</label>
-          <input type="search" id="search" require placeholder="검색어를 입력하세요">
-          <button class="btn-search" type="">검색</button>
+          <div class="search-wrap">
+            <label class="hidden" for="">검색어</label>
+            <input type="search" id="search" require placeholder="검색어를 입력하세요">
+            <button class="btn-search" type="">검색</button>
+          </div>
         </fieldset>
       </form>
     </header>
-    <nav class="navigation">내비게이션</nav>
+    <nav class="navigation">
+      <h2 class="hidden">
+        메인 메뉴
+      </h2>
+      <ul class="main-menu">
+        <li>
+          <span>HTML에 대해</span>
+          <ul class="sub-menu about-html">
+            <li><a href="#">HTML5 소개</a></li>
+            <li><a href="#">레퍼런스 소개</a></li>
+            <li><a href="#">활용예제</a></li>
+          </ul>
+        </li>
+        <li><span>CSS에 대해</span>
+          <ul class="sub-menu about-css">
+            <li><a href="#">CSS 소개</a></li>
+            <li><a href="#">CSS2 VS SCC3</a></li>
+            <li><a href="#">CSS 애니메이션</a></li>
+          </ul>
+        </li>
+        <li><span>웹표준/웹접근성</span>
+          <ul class="sub-menu">
+            <li><a href="#">웹표준이란?</a></li>
+            <li><a href="#">웹접근성의 개요</a></li>
+            <li><a href="#">HTML5의 현재와 미래</a></li>
+          </ul>
+        </li>
+        <li><span>묻고 답하기</span>
+          <ul class="sub-menu">
+            <li><a href="#">묻고 답하기</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">1대1 질문</a></li>
+          </ul>
+        </li>
+        <li><span>자료실</span>
+          <ul class="sub-menu">
+            <li><a href="#">공개자료실</a></li>
+            <li><a href="#">이미지 자료실</a></li>
+            <li><a href="#">예제 자료실</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
     <main class="main-content">
       <section class="recommend-book">추천 서적</section>
       <section class="news">새소식</section>
