@@ -36,7 +36,6 @@ body {
 /* 레이아웃 */
 
 .wrapper {
-  background: skyblue;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -44,26 +43,22 @@ body {
 
 .header,
 .navigation,
-.footer,
 .main-content,
-.slogan {
+.slogan,
+.footer {
   width: 100%;
 }
 
-.navigation {
-  background: plum;
-}
-
 .main-content {
-  background: #DDF184;
+  background: blue;
 }
 
 .slogan {
-  background: #F59F67;
+  background: orange;
 }
 
 .footer {
-  background: #83F1A8;
+  background: lime;
 }
 
 
@@ -84,8 +79,8 @@ body {
   }
   .member a {
     display: block;
-    padding: 0.5rem;
-    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem
   }
   .logo {
     padding: 1rem;
@@ -99,7 +94,7 @@ body {
     margin-right: 0.5rem;
     height: 30px;
     border-radius: 5px;
-    padding-left: 1.5rem;
+    padding-left: 1rem;
   }
   .btn-search {
     border: 0;
@@ -107,6 +102,7 @@ body {
     padding: 0.2rem 1rem;
     background: #988574;
     color: #fff;
+    height: 30px;
   }
 }
 
@@ -118,19 +114,17 @@ body {
     align-items: center;
   }
   .header,
-  .navigation,
-  .footer,
+  .main-menu,
   .main-content,
-  .slogan {
+  .slogan,
+  .footer {
     width: 80%;
   }
   .header {
-    /* TODO: 삭제예정 */
-    background: yellow;
     position: relative;
+    padding-bottom: 1rem;
   }
   .logo {
-    background: lime;
     position: absolute;
     left: 50px;
     top: 50%;
@@ -141,11 +135,54 @@ body {
     justify-content: flex-end;
   }
   .member a {
-    background: purple;
     display: block;
     padding: 1rem 0.5rem;
+    margin-left: 0.5rem;
   }
-  .member a::before {
-    content: "삼성증권"
+  .search-wrap {
+    display: flex;
+    justify-content: flex-end;
   }
+  .search input {
+    width: 400px;
+    height: 35px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 0 0 0 1rem;
+    margin-right: 1rem;
+  }
+  .btn-search {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background: #988574;
+    color: #fff;
+    padding: 0 1rem;
+  }
+}
+
+.navigation {
+  background: #988574;
+  border-top: 2px solid #222;
+  border-bottom: 2px solid #222;
+  padding: 1rem 0;
+}
+
+.main-menu {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.main-menu span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-shadow: -1px 0 0 #000, 0 -1px 0 #000, 1px 0 0 #000, 0 1px 0 #000;
+}
+
+.sub-menu li {
+  margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
+
 }
