@@ -1,390 +1,428 @@
-﻿@charset "utf-8";
-@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");
-@import url("./reset.css");
-
-/* 숨김 콘텐츠 */
-
-.hidden {
-  position: absolute;
-  left: -9999em;
-}
-
-
-/* 하이퍼링크 스타일 */
-
-a:link,
-a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-
-a:hover,
-a:focus {
-  color: #f00;
-}
-
-
-/* 반응형 콘텐츠 */
-
-.responsive {
-  max-width: 100%;
-  height: auto;
-}
-
-
-/* 본문 스타일 */
-
-body {
-  font-family: 'Spoqa Han Sans';
-  font-weight: 400;
-}
-
-
-/* 레이아웃 */
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.header,
-.navigation,
-.main-content,
-.slogan,
-.footer {
-  width: 100%;
-}
-
-
-/* 메인콘텐츠 */
-
-.main-content {
-  padding: 0 1rem;
-}
-
-
-/* 메인콘텐츠 제목 공통*/
-
-.main-content-heading {
-  margin: 1rem 0;
-  padding-left: 65px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  height: 60px;
-  background: url('images/sprite_main.png') no-repeat;
-}
-
-.en-heading {
-  display: block;
-}
-
-.recommend-book-heading .en-heading {
-  color: #abd375;
-}
-
-.news-heading {
-  background-position: 0 -230px;
-}
-
-.news-heading .en-heading {
-  color: #e8ca58;
-}
-
-.board-heading {
-  background-position: 0 -115px;
-}
-
-.board-heading .en-heading {
-  color: #c7b39a;
-}
-
-.favorite-site-heading {
-  background-position: 0 -345px;
-}
-
-.favorite-site-heading .en-heading {
-  color: #eea60a;
-}
-
-.twitter-heading {
-  background-position: 0 -460px;
-}
-
-.twitter-heading .en-heading {
-  color: #6aaee6;
-}
-
-
-/* 추천서적 */
-
-.recommend-book,
-.news,
-.board,
-.favorite-site {
-  border-bottom: 2px solid #999;
-  padding-bottom: 1rem;
-}
-
-.recommend-book-cover {
-  width: 50%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.recommend-book-detail {
-  text-align: center;
-  margin: 1rem 0;
-}
-
-.recommend-book-detail dt,
-.recommend-book-detail dd {
-  display: inline;
-}
-
-.recommend-book-grade {
-  display: block!important;
-  color: #abd375;
-  font-size: 1.5rem;
-}
-
-
-/* 새소식 */
-
-.news p {
-  margin: 1rem 0;
-}
-
-.news time {
-  display: block;
-  text-align: right;
-}
-
-
-/* 게시판 */
-
-.board li {
-  display: flex;
-  justify-content: space-between;
-  background: yellow;
-}
-
-.board li a {
-  width: calc(100% -100px);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  background: pink;
-}
-
-.slogan {
-  background: orange;
-}
-
-.footer {
-  background: lime;
-}
-
-
-/* 모바일 */
-
-@media all and (max-width:999px) {
-  .header {
-    background: #38302e;
+﻿  @charset "utf-8";
+  @import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");
+  @import url("./reset.css");
+  /* 숨김 콘텐츠 */
+  
+  .hidden {
+    position: absolute;
+    left: -9999em;
+  }
+  /* 하이퍼링크 스타일 */
+  
+  a:link,
+  a:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  a:hover,
+  a:focus {
+    color: #f00;
+  }
+  /* 반응형 콘텐츠 */
+  
+  .responsive {
+    max-width: 100%;
+    height: auto;
+  }
+  /* 본문 스타일 */
+  
+  body {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 400;
+  }
+  /* 레이아웃 */
+  
+  .wrapper {
     display: flex;
     flex-direction: column;
-    color: #fff;
   }
-  .member {
-    order: -1;
-    background: #988574;
-    display: flex;
-    justify-content: flex-end;
-  }
-  .member a {
-    display: block;
-    padding: 0.5rem 1rem;
-    margin-left: 0.5rem
-  }
-  .logo {
-    padding: 1rem;
-  }
-  .search {
-    padding: 0 1rem 1rem 1rem;
-  }
-  #search {
-    border: 1px solid #aaa;
-    width: calc(100% - 75px);
-    margin-right: 0.5rem;
-    height: 30px;
-    border-radius: 5px;
-    padding-left: 1rem;
-  }
-  .btn-search {
-    border: 0;
-    border-radius: 5px;
-    padding: 0.2rem 1rem;
-    background: #988574;
-    color: #fff;
-    height: 30px;
-  }
-  .menubar-container {
-    position: absolute;
-    top: 4rem;
-    right: 1rem;
-    width: 40px;
-    height: 40px;
-    overflow: hidden;
-  }
-  .btn-menubar {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    padding: 40px 0 0 0;
-    border: 0;
-    background: transparent;
-    overflow: hidden;
-    cursor: pointer;
-  }
-  .menubar {
-    display: block;
-    width: 40px;
-    height: 10px;
-    background: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .menubar-top {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-  .menubar-middle {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-  }
-  .menubar-bottom {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
-  .menubar-act .menubar-top {
-    transform: rotate(45deg);
-    top: 50%;
-    margin-top: -5px;
-  }
-  .menubar-act .menubar-middle {
-    transform: translateX(-100%) translateY(-5px);
-  }
-  .menubar-act .menubar-bottom {
-    transform: rotate(-45deg);
-    top: 50%;
-    margin-top: -5px;
-  }
-  .main-menu {
-    transform: translateX(-100%);
-    background: rgba(0, 0, 0, 0.85);
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 70vw;
-    height: 100vh;
-    padding: 2rem;
-    box-sizing: border-box;
-    transition: all 0.2s;
-    font-size: 10px;
-  }
-  .menu-act {
-    transform: translateX(0);
-  }
-  .sub-menu {
-    list-style: circle;
-    padding-left: 2rem;
-  }
-  .sub-menu li {
-    margin: 0.5rem 0;
-  }
-}
-
-
-/* 데스크탑 */
-
-@media all and (min-width:1000px) {
-  .wrapper {
-    align-items: center;
-  }
+  
   .header,
-  .main-menu,
+  .navigation,
   .main-content,
   .slogan,
   .footer {
-    width: 80%;
+    width: 100%;
   }
-  .header {
-    position: relative;
-    padding-bottom: 1rem;
-  }
-  .logo {
-    position: absolute;
-    left: 50px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .member {
-    display: flex;
-    justify-content: flex-end;
-  }
-  .member a {
-    display: block;
-    padding: 1rem 0.5rem;
-    margin-left: 0.5rem;
-  }
-  .search-wrap {
-    display: flex;
-    justify-content: flex-end;
-  }
-  .search input {
-    width: 400px;
-    height: 35px;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    padding: 0 0 0 1rem;
-    margin-right: 1rem;
-  }
-  .btn-search {
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    background: #988574;
-    color: #fff;
+  /* 메인콘텐츠 */
+  
+  .main-content {
     padding: 0 1rem;
   }
-  .navigation {
-    background: #988574;
-    border-top: 2px solid #222;
-    border-bottom: 2px solid #222;
-    padding: 1rem 0;
+  /* 메인콘텐츠 제목 공통*/
+  
+  .main-content-heading {
+    margin: 1rem 0;
+    padding-left: 65px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    height: 60px;
+    background: url('images/sprite_main.png') no-repeat;
   }
-  .menubar-container {
-    display: none;
+  
+  .en-heading {
+    display: block;
   }
-  .main-menu {
+  
+  .recommend-book-heading .en-heading {
+    color: #abd375;
+  }
+  
+  .news-heading {
+    background-position: 0 -230px;
+  }
+  
+  .news-heading .en-heading {
+    color: #e8ca58;
+  }
+  
+  .board-heading {
+    background-position: 0 -115px;
+  }
+  
+  .board-heading .en-heading {
+    color: #c7b39a;
+  }
+  
+  .favorite-site-heading {
+    background-position: 0 -345px;
+  }
+  
+  .favorite-site-heading .en-heading {
+    color: #eea60a;
+  }
+  
+  .twitter-heading {
+    background-position: 0 -460px;
+  }
+  
+  .twitter-heading .en-heading {
+    color: #6aaee6;
+  }
+  /* 추천서적 */
+  
+  .recommend-book,
+  .news,
+  .board,
+  .favorite-site {
+    border-bottom: 2px solid #999;
+    padding-bottom: 1rem;
+  }
+  
+  .recommend-book-cover {
+    width: 50%;
     margin: 0 auto;
+    text-align: center;
+  }
+  
+  .recommend-book-detail {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  .recommend-book-detail dt,
+  .recommend-book-detail dd {
+    display: inline;
+  }
+  
+  .recommend-book-grade {
+    display: block!important;
+    color: #abd375;
+    font-size: 1.5rem;
+  }
+  /* 새소식 */
+  
+  .news p {
+    margin: 1rem 0;
+  }
+  
+  .news time {
+    display: block;
+    text-align: right;
+  }
+  /* 게시판 */
+  
+  .board li {
     display: flex;
     justify-content: space-between;
-    color: #fff;
   }
-  .main-menu span {
-    font-size: 1rem;
+  
+  .board li a {
+    width: calc(100% -100px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .board time {
+    display: block;
+    width: 100px;
+    text-align: right;
+  }
+  
+  .board {
+    position: relative;
+  }
+  
+  .board-more {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .board-more:before {
+    content: "+";
+    color: hsla(100, 100%, 20%, 1);
+    margin-right: 0.3rem;
     font-weight: 700;
-    text-shadow: -1px 0 0 #000, 0 -1px 0 #000, 1px 0 0 #000, 0 1px 0 #000;
   }
-  .sub-menu li {
-    margin: 0.5rem 0 0.5rem 0.5rem;
+  /* 인기 사이트 */
+  
+  .favorite-site ol {
+    overflow: hidden;
   }
-}
+  
+  .favorite-site li {
+    counter-increment: number;
+  }
+  
+  .favorite-site li:before {
+    content: counter(number, decimal);
+    background: #f00;
+    color: #fff;
+    font-size: 0.8rem;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+  /* Twitter */
+  
+  .twitter-profile {
+    width: 20%;
+    float: right;
+  }
+  
+  .twitter-profile img {
+    border: 1px solid#aaa;
+    border-radius: 50%;
+    padding: 0.5rem;
+  }
+  
+  .twitter-date {
+    display: block;
+    clear: both;
+    text-align: right;
+  }
+  
+  .slogan {
+    background: orange;
+  }
+  
+  .footer {
+    background: lime;
+  }
+  /* 모바일 */
+  
+  @media all and (max-width:999px) {
+    .header {
+      background: #38302e;
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+    }
+    .member {
+      order: -1;
+      background: #988574;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .member a {
+      display: block;
+      padding: 0.5rem 1rem;
+      margin-left: 0.5rem
+    }
+    .logo {
+      padding: 1rem;
+    }
+    .search {
+      padding: 0 1rem 1rem 1rem;
+    }
+    #search {
+      border: 1px solid #aaa;
+      width: calc(100% - 75px);
+      margin-right: 0.5rem;
+      height: 30px;
+      border-radius: 5px;
+      padding-left: 1rem;
+    }
+    .btn-search {
+      border: 0;
+      border-radius: 5px;
+      padding: 0.2rem 1rem;
+      background: #988574;
+      color: #fff;
+      height: 30px;
+    }
+    .menubar-container {
+      position: absolute;
+      top: 4rem;
+      right: 1rem;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+    }
+    .btn-menubar {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      padding: 40px 0 0 0;
+      border: 0;
+      background: transparent;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .menubar {
+      display: block;
+      width: 40px;
+      height: 10px;
+      background: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .menubar-top {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .menubar-middle {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+    .menubar-bottom {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    .menubar-act .menubar-top {
+      transform: rotate(45deg);
+      top: 50%;
+      margin-top: -5px;
+    }
+    .menubar-act .menubar-middle {
+      transform: translateX(-100%) translateY(-5px);
+    }
+    .menubar-act .menubar-bottom {
+      transform: rotate(-45deg);
+      top: 50%;
+      margin-top: -5px;
+    }
+    .main-menu {
+      transform: translateX(-100%);
+      background: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 70vw;
+      height: 100vh;
+      padding: 2rem;
+      box-sizing: border-box;
+      transition: all 0.2s;
+      font-size: 10px;
+    }
+    .menu-act {
+      transform: translateX(0);
+    }
+    .sub-menu {
+      list-style: circle;
+      padding-left: 2rem;
+    }
+    .sub-menu li {
+      margin: 0.5rem 0;
+    }
+  }
+  /* 데스크탑 */
+  
+  @media all and (min-width:1000px) {
+    .wrapper {
+      align-items: center;
+    }
+    .header,
+    .main-menu,
+    .main-content,
+    .slogan,
+    .footer {
+      width: 80%;
+    }
+    .header {
+      position: relative;
+      padding-bottom: 1rem;
+    }
+    .logo {
+      position: absolute;
+      left: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .member {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .member a {
+      display: block;
+      padding: 1rem 0.5rem;
+      margin-left: 0.5rem;
+    }
+    .search-wrap {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .search input {
+      width: 400px;
+      height: 35px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      padding: 0 0 0 1rem;
+      margin-right: 1rem;
+    }
+    .btn-search {
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      background: #988574;
+      color: #fff;
+      padding: 0 1rem;
+    }
+    .navigation {
+      background: #988574;
+      border-top: 2px solid #222;
+      border-bottom: 2px solid #222;
+      padding: 1rem 0;
+    }
+    .menubar-container {
+      display: none;
+    }
+    .main-menu {
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      color: #fff;
+    }
+    .main-menu span {
+      font-size: 1rem;
+      font-weight: 700;
+      text-shadow: -1px 0 0 #000, 0 -1px 0 #000, 1px 0 0 #000, 0 1px 0 #000;
+    }
+    .sub-menu li {
+      margin: 0.5rem 0 0.5rem 0.5rem;
+    }
+  }
